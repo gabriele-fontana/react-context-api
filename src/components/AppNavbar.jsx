@@ -16,7 +16,7 @@ export default function AppNavbar() {
         <>
                 <nav className="navbar navbar-expand-sm navbar-dark">
                     <div className="container-fluid">
-                        <a className="navbar-brand" href="#">E-COMMERCE</a>
+                        <a className="navbar-brand" href="#"><img src="../src/assets/store.png" alt="logo" width={30} height={30}/></a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarID"
                             aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>

@@ -31,7 +31,7 @@ export default function AboutUs() {
                             />
                         </div>
                         <div className="col-md-6">
-                            <h2 className="fw-bold mb-3">Perché abbiamo iniziato</h2>
+                            <h2 className="fw-bold mb-3">Perché abbiamo iniziato?</h2>
                             <p className="text-muted">
                                 Tutto è nato da un'idea semplice: rendere accessibili a tutti prodotti di alta qualità
                                 senza compromessi. Crediamo che ogni acquisto debba essere un'esperienza positiva.
@@ -48,7 +48,7 @@ export default function AboutUs() {
             {/* Values section */}
             <section className="py-5 bg-light" id="valuesSection">
                 <div className="container text-center">
-                    <h2 className="mb-5 fw-bold">I nostri valori</h2>
+                    <h2 className="mb-5 fw-bold">I nostri valori:</h2>
                     <div className="row">
                         <div className="col-md-4">
                             <div className="p-3">
