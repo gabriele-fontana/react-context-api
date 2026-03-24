@@ -8,7 +8,7 @@ const apiUrl = 'https://fakestoreapi.com/products'
 
 export default function Products(){
     const [products, setProducts] = useState([])
-    const budgetMode = useContext(BudgetContext)
+    const { budgetMode } = useContext(BudgetContext)
     
     useEffect(()=>{
         fetch(apiUrl)
@@ -21,6 +21,10 @@ export default function Products(){
             })
     },[])
 
+    const displayedProducts = budgetMode
+        ? products.filter(product => product.price < 30)
+        : products;
+
 
     return  (
         <>
@@ -29,7 +33,7 @@ export default function Products(){
                 <div className="container">
                     <header className="header"><h1 className="text-center py-3">Products</h1></header>
                     <div className="row">
-                        {products.map(product => (
+                        {displayedProducts.map(product => (
                             <div key={product.id} className="col-md-6 col-lg-3" >
                                 <div className="card mb-4 p-2">
                                     <img src={product.image} className="card-img-top" alt={product.title} style={{ height: '200px', objectFit: 'contain' }} />
