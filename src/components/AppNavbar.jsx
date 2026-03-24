@@ -1,8 +1,15 @@
-
+import { useContext } from "react"
 import { NavLink, Link } from "react-router-dom"
+import BudgetContext from "../contexts/BudgetContext"
+
 
 export default function AppNavbar() {
-
+    const { budgetMode, setBudgetMode } = useContext(BudgetContext)
+    
+    function toggleBudgetMode(){
+         setBudgetMode(!budgetMode)
+    }
+    
 
 
     return(
@@ -19,7 +26,10 @@ export default function AppNavbar() {
                             <NavLink className="nav-link" aria-current="page" to="/"><i className="bi bi-house-fill"></i> Home</NavLink>
                             <NavLink className="nav-link" aria-current="page" to="/Products"><i className="bi bi-cart-fill"></i> Products</NavLink>
                             <NavLink className="nav-link" aria-current='page' to='/AboutUs'><i className="bi bi-person-fill"></i> About Us</NavLink>
-
+                            <button className="btn text-white" onClick={toggleBudgetMode}>
+                                <i className={`bi ${budgetMode ? 'bi-toggle-on' : 'bi-toggle-off'}`}></i>
+                                <span className="ms-2">{budgetMode ? 'Budget ON' : 'Budget OFF'}</span>
+                            </button>
                                 
                             </div>
                         </div>
